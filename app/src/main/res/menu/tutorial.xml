@@ -1,17 +1,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="ge.moodme.asroma.Menu">
+    tools:context="ge.moodme.asroma.About">
     <item
-        android:id="@+id/about"
-        android:icon="@drawable/menu_dots"
+        android:id="@+id/action_tutorial"
         android:orderInCategory="200"
-        android:title="@string/title_activity_about"
+        android:title="@string/title_activity_tutorial"
         app:showAsAction="always" />
     <item
-        android:id="@+id/add"
-        android:icon="@drawable/ic_action_camera"
+        android:id="@+id/navigate"
         android:orderInCategory="100"
-        android:title="@string/add_photo"
-         />
+        android:title="@string/back"
+        android:icon="@drawable/ic_action_back"
+        />
 </menu>

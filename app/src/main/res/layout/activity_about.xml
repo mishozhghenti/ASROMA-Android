@@ -7,17 +7,15 @@
     android:fitsSystemWindows="true"
     tools:context="ge.moodme.asroma.About">
 
-    <android.support.design.widget.AppBarLayout
+
+
+   <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+       <include layout="@layout/about_toolbar"
+        android:id="@+id/about_appbar"/>
 
     </android.support.design.widget.AppBarLayout>
 
