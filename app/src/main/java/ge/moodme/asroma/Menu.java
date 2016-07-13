@@ -1,7 +1,9 @@
 package ge.moodme.asroma;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuInflater;
@@ -15,10 +17,12 @@ import android.app.Activity;
 import android.widget.Toast;
 import android.view.View;
 
+import java.io.File;
+
 public class Menu extends AppCompatActivity {
 
     private final String TAG = "Menu Message";
-    private final String[] categories = {"Team", "Legends", "Management"};
+    private final String[] categories = {"My Moodies","Team", "Legends", "Management"};
     private  Toolbar menuToolBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +33,31 @@ public class Menu extends AppCompatActivity {
     }
 
     void initiateWidgets (){
+        /*widget declaration and init for menu page*/
         menuToolBar = (Toolbar) findViewById(R.id.menu_appbar);
+        ListView menuList = (ListView)findViewById(R.id.listViewMenu);
+        ListAdapter menuAdapter = new CustomMenuAdapter(this, categories);
+
+        /* Set properties to widget views */
         setSupportActionBar(menuToolBar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setIcon(R.drawable.ic_action_camera);
+
+        menuList.setAdapter(menuAdapter);
+    }
+
+    public void imageGalleryOpen(View view){
+
+        Intent pictureSelectorIntent = new Intent(Intent.ACTION_PICK);
+
+        File galleryDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+        String galleryDirectoryPath =  galleryDirectory.getPath();
+
+        Uri data = Uri.parse(galleryDirectoryPath);
+
+        pictureSelectorIntent.setDataAndType(data, "image/*");
+
+       // startActivityForResult(pictureSelectorIntent,IMAGE_GALLERY_REQUEST);
     }
 
     @Override
@@ -53,13 +79,17 @@ public class Menu extends AppCompatActivity {
         if (curId == R.id.about) {
             goAbout();
         }
-
         return true;
     }
 
     private void goAbout() {
         Intent about = new Intent(getApplicationContext(), ge.moodme.asroma.About.class);
         startActivity(about);
+    }
+
+    private void callCamera(){
+        Intent camera =  new Intent(getApplicationContext(), ge.moodme.asroma.Camera.class);
+        startActivity(camera);
     }
 }
 

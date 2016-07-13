@@ -4,17 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="ge.moodme.asroma.About">
-   <android.support.design.widget.AppBarLayout
+    tools:context="ge.moodme.asroma.Camera">
+
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme">
 
-       <include layout="@layout/about_toolbar"
-        android:id="@+id/about_appbar"/>
-
+    <include layout="@layout/camera_toolbar"
+        android:id="@+id/camera_appbar"/>
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_about" />
+    <include layout="@layout/content_camera"/>
 
-</android.support.design.widget.CoordinatorLayout>
+    </android.support.design.widget.CoordinatorLayout>

@@ -23,6 +23,7 @@ public class About extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.about_appbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setIcon(R.drawable.ic_action_back);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
     //    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 

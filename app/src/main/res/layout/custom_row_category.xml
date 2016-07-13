@@ -1,5 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="New Text"
+        android:background="@color/colorPrimary"
+        android:id="@+id/categoryTextView"
+        android:textColor="@color/colorPrimaryDark"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp" />
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/categoryTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageViewSample1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:src="@drawable/add" />
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageViewSample2"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageViewSample1"
+            android:layout_toEndOf="@+id/imageViewSample1"
+            android:layout_margin="5dp" />
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageViewSample3"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageViewSample2"
+            android:layout_toEndOf="@+id/imageViewSample2"
+            android:layout_margin="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/textViewName1"
+            android:layout_below="@+id/imageViewSample1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:layout_alignRight="@+id/imageViewSample1"
+            android:layout_alignEnd="@+id/imageViewSample1"
+            android:layout_margin="5dp"
+            android:textColor="@color/abc_background_cache_hint_selector_material_dark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/textViewName2"
+            android:layout_below="@+id/imageViewSample2"
+            android:layout_alignLeft="@+id/imageViewSample2"
+            android:layout_alignStart="@+id/imageViewSample2"
+            android:layout_alignRight="@+id/imageViewSample2"
+            android:layout_alignEnd="@+id/imageViewSample2"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:textColor="@color/abc_background_cache_hint_selector_material_dark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/textViewName3"
+            android:layout_below="@+id/imageViewSample3"
+            android:layout_toRightOf="@+id/imageViewSample2"
+            android:gravity="center"
+            android:layout_alignRight="@+id/imageViewSample3"
+            android:layout_alignEnd="@+id/imageViewSample3"
+            android:layout_margin="5dp"
+            android:textColor="@color/abc_background_cache_hint_selector_material_dark" />
+    </RelativeLayout>
 
 </RelativeLayout>
